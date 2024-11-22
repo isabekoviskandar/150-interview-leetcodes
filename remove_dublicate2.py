@@ -6,13 +6,12 @@ def removeDuplicates(nums):
         else:
             count[num] = 1
 
-    index = 0  # Pointer for the in-place modification
+    index = 0  
     for num in nums:
-        if count[num] <= 2:  # Keep numbers that appear 2 or fewer times
+        if count[num] <= 2:  
             nums[index] = num
             index += 1
 
-    # Fill the rest of the array with placeholder values (optional)
     for i in range(index, len(nums)):
         nums[i] = '_'
 
@@ -21,7 +20,7 @@ def removeDuplicates(nums):
 nums = [1, 1, 1, 2, 2, 3]
 length = removeDuplicates(nums)
 
-# Output the result
+
 print("Output length:", length)
-print("Modified nums:", nums[:length])  # Print only the valid part of nums
-print("Full nums array:", nums)         # Print the entire nums array with placeholders
+print("Modified nums:", nums[:length])  
+print("Full nums array:", nums)         
